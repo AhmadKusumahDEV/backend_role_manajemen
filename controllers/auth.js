@@ -4,7 +4,7 @@ import argon2 from 'argon2'
 export const Login = async (req, res) => {
     const user = await Users.findOne({
         where: {
-            email: req.body.email
+            email: req.body.email // select * from users where email = req.body.email
         }
     })
     if (!user) return res.status(404).json({ msg: "user menghilang dari lane" })

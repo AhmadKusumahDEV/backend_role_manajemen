@@ -13,7 +13,7 @@ const router = Express.Router()
 
 router.get('/products', verifyUser, getProducts)
     .post('/products', verifyUser, createProducts)
- 
+
 router.get('/products/:id', verifyUser, getProductsByid)
     .patch('/products/:id', verifyUser, updateProducts)
     .delete('/products/:id', verifyUser, deleteProducts)
